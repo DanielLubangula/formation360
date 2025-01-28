@@ -1094,3 +1094,163 @@ footer {
         gap: 15px;
     }
 }
+
+/*  */
+
+
+.about-page-container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-page-container header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-page-container h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.about-subtitle {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 15px;
+}
+
+.about-mission {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mission-icon i {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.mission-text h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.about-values h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    background-color: var(--white);
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.about-team {
+    text-align: center;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-team h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 1200px) {
+    .about-page-container {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page-container h1 {
+        font-size: 2rem;
+    }
+
+    .about-subtitle {
+        font-size: 1rem;
+    }
+
+    .about-mission {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .mission-icon i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page-container {
+        padding: 20px 10px;
+    }
+
+    .about-mission,
+    .about-team,
+    .value-card {
+        padding: 20px;
+    }
+
+    .mission-icon i {
+        font-size: 2.5rem;
+    }
+
+    .value-card i {
+        font-size: 2.5rem;
+    }
+}

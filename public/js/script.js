@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navWrapper.classList.remove('show-nav');
             
             // Scroll to section
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+            document.querySelector(this.getAttribute('href'))?.scrollIntoView({
                 behavior: 'smooth'
             });
         });
