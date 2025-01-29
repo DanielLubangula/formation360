@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/style/stylesAdmin.css">
+
+<div class="admin-dashboard-container">
+    <header class="admin-header">
+        <div class="header-content">
+            <h1>Tableau de Bord Administrateur</h1>
+            <p class="admin-subtitle">Gestion des Utilisateurs de Formation360</p>
+        </div>
+        <div class="user-actions">
+            <button id="refreshUsers" class="btn btn-primary">
+                <i class="fas fa-sync"></i> 
+                <span class="btn-text">Actualiser</span>
+            </button>
+            <div class="user-stats">
+                <div>
+                    <p>Total des inscrits : <span id="totalUsers"></span></p>
+                </div>
+            </div>
+
+
+        </div>
+            <button id="printUsers" class="btn btn-secondary">
+                <i class="fas fa-print"></i>
+                <span class="btn-text">Imprimer</span>
+            </button>
+
+            <button id="sendUsers" class="send-btn">
+                <i class="fas fa-share-alt"></i> Envoyer
+            </button>
+
+
+    </header>
+
+    <main class="admin-content">
+        <section class="user-management">
+            <div class="user-table-container">
+                <div class="table-responsive">
+                    <table id="userTable" class="user-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Email</th>
+                                <th>Téléphone</th>
+                                <th>Formation</th>
+                                <th>Niveau</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody">
+                            <!-- Users will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="userCardsContainer" class="user-cards-container">
+                    <!-- Mobile card view will be populated here -->
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- User Details Modal -->
+<div id="userDetailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="userDetailsContent"></div>
+    </div>
+</div>
+
+<script src="/js/scriptAdmin.js"></script>

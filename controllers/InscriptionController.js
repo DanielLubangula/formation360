@@ -76,3 +76,29 @@ exports.Inscription = async (req, res) => {
         res.status(500).json({ error: 'Erreur interne du serveur.' });
     }
 };
+
+exports.getAllUsers = async (req, res) => {
+    try {
+        const users = await Inscription.find();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ message: "Erreur lors de la récupération des utilisateurs", error });
+    }
+};
+
+require("dotenv").config();
+
+exports.processConnexion = async (req, res) => {
+    const { email, password } = req.body;
+
+    // Récupérer les credentials depuis le fichier .env
+    const adminEmail = process.env.EMAIL;
+    const adminPassword = process.env.PASSWORD_EMAIL;
+
+    if (email === adminEmail && password === adminPassword) {
+        req.session.admin = { email }; // Création d'une session admin
+        return res.json({ success: true });
+    } else {
+        return res.json({ success: false, message: "Email ou mot de passe incorrect." });
+    }
+};

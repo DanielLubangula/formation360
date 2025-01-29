@@ -3,6 +3,15 @@ const router = express.Router();
 const InscriptionController = require('../controllers/InscriptionController');
 const Inscription = require('../models/Inscription');
 
+const authAdmin = (req, res, next) => {
+    if (req.session && req.session.admin) {
+        return next(); // Continue vers la route demandée
+    }
+    
+    return res.redirect("/home"); // Rediriger si pas connecté
+};
+
+
 router.get("/all", async (req, res) => {
     const inscriptions = await Inscription.find();
     res.json(inscriptions);
@@ -49,5 +58,29 @@ router.get('/maintenace', (req, res) => {
 });
 
 router.post("/api/inscription", InscriptionController.Inscription);
+
+router.get("/admin",authAdmin, (req, res) => {
+    res.render("admin/board")
+})
+
+router.get("/api/admin/getusers",authAdmin, InscriptionController.getAllUsers); 
+
+router.get("/connexion/admin", (req, res) => {
+    res.render("admin/connexionAdmin", {nabarBool : true, footerBoll : true})
+}); 
+
+router.post("/admin/login", InscriptionController.processConnexion); 
+
+router.delete("/users/delete/:id",authAdmin, async (req, res) => {
+    try {
+        await Inscription.findByIdAndDelete(req.params.id);
+        res.json({ message: "Utilisateur supprimé avec succès" });
+    } catch (error) {
+        res.status(500).json({ message: "Erreur lors de la suppression de l'utilisateur", error });
+    }
+});
+
+
+
 
 module.exports = router;

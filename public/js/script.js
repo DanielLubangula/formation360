@@ -48,11 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // });
 
     // Mobile Menu Toggle
-    burgerMenu.addEventListener('click', () => {
-        burgerMenu.classList.toggle('active');
-        navWrapper.classList.toggle('show-nav');
-    });
-
+    if (burgerMenu){
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            navWrapper.classList.toggle('show-nav');
+        });
+    
+    }
     // Dropdown Toggle for Mobile
     dropdowns.forEach(dropdown => {
         const dropdownLink = dropdown.querySelector('a');
