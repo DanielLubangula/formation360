@@ -67,6 +67,10 @@ app.use((req, res, next) => {
 // Connexion à la base de données MongoDB
 db.connect();
 
+app.get("/", (req, res) => {
+  res.redirect('/home')
+})
+
 // Routes principales
 app.use("/", route);
 

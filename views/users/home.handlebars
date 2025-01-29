@@ -162,6 +162,8 @@ document.getElementById('inscriptionForm').addEventListener('submit', async (eve
         const result = await response.json();
 
         if (response.ok) {
+            document.getElementById('inscriptionForm').reset();  // Réinitialiser tous les champs du formulaire
+   
              // Display confirmation modal
             showConfirmationModal(formData);
         } else {
