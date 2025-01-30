@@ -758,7 +758,7 @@
 .formation-curriculum,
 .formation-instructor,
 .formation-pricing {
-    padding: 80px 0;
+    padding: 20px 0;
     background-color: white;
 }
 
@@ -833,19 +833,6 @@
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        margin-top: 20px;
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
 
     .about-page .about-content {
         padding: 20px 10px;
@@ -987,7 +974,7 @@
     .overview-image .image-placeholder {
         width: 250px;
         height: 250px;
-        margin: 20px auto;
+        /* margin: 20px auto; */
     }
 
     .professional-about-grid {
@@ -1014,6 +1001,25 @@
         align-items: center;
     }
 
+    .company-overview {
+        padding: 10px 0;
+    }
+
+    .testimonials{
+        padding: 10px 0;
+    }
+
+    .expertise-details{
+        padding: 10px 0;
+    }
+
+    .expertise-card{
+        padding: 10px 0;
+    }
+
+    .expertise-cards{
+        padding: 0px;
+    }
     .values-list-professional li {
         margin-bottom: 10px;
     }
