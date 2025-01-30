@@ -1,6 +1,4 @@
-:root {
-    --primary-color: rgb(0, 48, 73);     /* Deep red */
-}
+
 
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -25,8 +23,8 @@
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--light-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .formations {
@@ -114,7 +112,7 @@
 
 .section-header h2, 
 .section-header h3 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -122,7 +120,7 @@
 .divider {
     width: 100px;
     height: 3px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     margin: 0 auto;
 }
 
@@ -183,7 +181,7 @@
 }
 
 .member-card .role {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 500;
     margin-bottom: 5px;
 }
@@ -239,7 +237,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px dashed var(--primary-color);
+    border: 2px dashed var(--secondary-color);
     transition: all 0.3s ease;
 }
 
@@ -262,7 +260,7 @@
 }
 
 .about-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     color: var(--light-color);
     padding: 100px 0;
     text-align: center;
@@ -296,7 +294,7 @@
 }
 
 .overview-text h2 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
@@ -318,7 +316,7 @@
 .image-placeholder .icon {
     width: 150px;
     height: 150px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .team-expertise {
@@ -393,7 +391,7 @@
 }
 
 .team-member .member-details .role {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 500;
     margin-bottom: 5px;
 }
@@ -431,7 +429,7 @@
 
 .expertise-details h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 50px;
 }
 
@@ -456,7 +454,7 @@
 .card-icon {
     width: 80px;
     height: 80px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin: 0 auto 20px;
 }
 
@@ -467,7 +465,7 @@
 
 .testimonials h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 50px;
 }
 
@@ -491,7 +489,7 @@
 
 .testimonial-author {
     text-align: right;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .company-history {
@@ -630,7 +628,7 @@
 }
 
 .professional-text-block h3 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
     font-weight: 700;
@@ -663,7 +661,7 @@
 .professional-image-container .icon {
     width: 150px;
     height: 150px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     z-index: 2;
 }
 
@@ -713,7 +711,7 @@
 
 /* New Styles for Formation Detail Pages */
 .formation-details .formation-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     color: var(--light-color);
     text-align: center;
     padding: 100px 0;
@@ -758,7 +756,7 @@
 .formation-curriculum,
 .formation-instructor,
 .formation-pricing {
-    padding: 20px 0;
+    /* padding: 20px 0; */
     background-color: white;
 }
 
@@ -818,7 +816,7 @@
 
 .formation-pricing .pricing-card .price {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
