@@ -615,6 +615,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.formations h2{
+    text-align: center;
+}
+
 .cta-section .cta-button:hover {
     background-color: var(--secondary-color);
 }
