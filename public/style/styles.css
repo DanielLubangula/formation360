@@ -208,10 +208,11 @@ body {
 }
 
 .rotating-subtitle {
-    color: var(--white);
+    color: var(--background-color);
     margin-top: 1rem;
     opacity: 0;
     animation: fade-in 2s forwards 4s;
+    font-weight: bold;
 }
 
 @keyframes fade-in {

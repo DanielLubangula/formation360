@@ -279,6 +279,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    padding-bottom: 20px;
 }
 
 .company-overview {
@@ -290,7 +291,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    align-items: center;
 }
 
 .overview-text h2 {
@@ -598,7 +598,7 @@
 
 .professional-about {
     background-color: var(--background-color);
-    padding: 80px 0;
+    padding: 30px 0;
 }
 
 .professional-about-content {
@@ -764,7 +764,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    align-items: center;
+    padding-top : 30px
+}
+
+.container h2{
+    padding: 30px 0px;
+    text-align: center;
 }
 
 .formation-overview ul {
