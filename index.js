@@ -72,7 +72,7 @@ app.get("/", (req, res) => {
 })
 
 // Routes principales
-app.use("/", route);
+app.use("/", route); 
 
 // Configuration de Socket.io
 //require('./socket/socket')(io);
