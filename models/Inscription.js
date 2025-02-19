@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const InscriptionSchema = new mongoose.Schema({
     nom: { type: String, required: true },
     prenom: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
+    email: { type: String },
     telephone: { type: String, required: true },
     dateNaissance: { type: Date },
     formation: { type: String, required: true },

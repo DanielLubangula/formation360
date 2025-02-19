@@ -37,7 +37,7 @@ exports.Inscription = async (req, res) => {
         await newInscription.save();
 
         // Envoyer un email via Formspree
-        const formspreeEndpoint = 'https://formspree.io/f/xdkagzvw'; // Remplace par ton URL Formspree
+        const formspreeEndpoint = 'https://formspree.io/f/mbldqkyz'; // Remplace par ton URL Formspree
 
         const emailBody = {
             nom,
