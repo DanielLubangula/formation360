@@ -1,4 +1,5 @@
 const express = require('express');
+const Registration = require('../models/Special');
 const router = express.Router();
 const InscriptionController = require('../controllers/InscriptionController');
 const Inscription = require('../models/Inscription');
@@ -71,14 +72,48 @@ router.get("/connexion/admin", (req, res) => {
 
 router.post("/admin/login", InscriptionController.processConnexion); 
 
-router.delete("/users/delete/:id",authAdmin, async (req, res) => {
+// router.delete("/users/delete/:id",authAdmin, async (req, res) => {
+//     try {
+//         const normal = await Inscription.findById(req.params.id)
+
+//         if (normal){
+//             await Inscription.findByIdAndDelete(req.params.id);
+//         }else{
+//             await Registration.findByIdAndDelete(req.params.id);
+//         }
+//         res.json({ message: "Utilisateur supprimé avec succès" });
+//     } catch (error) {
+//         res.status(500).json({ message: "Erreur lors de la suppression de l'utilisateur", error });
+//     }
+// });
+
+router.delete("/users/delete/:id", authAdmin, async (req, res) => {
     try {
-        await Inscription.findByIdAndDelete(req.params.id);
+        let user = await Inscription.findById(req.params.id);
+        
+        if (user) {
+            await Inscription.findByIdAndDelete(req.params.id);
+        } else {
+            user = await Registration.findById(req.params.id);
+            if (user) {
+                await Registration.findByIdAndDelete(req.params.id);
+            } else {
+                return res.status(404).json({ message: "Utilisateur introuvable" });
+            }
+        }
+
         res.json({ message: "Utilisateur supprimé avec succès" });
+
     } catch (error) {
         res.status(500).json({ message: "Erreur lors de la suppression de l'utilisateur", error });
     }
 });
+
+router.post('/api/register', InscriptionController.registerUser);
+
+router.get('/specialsession', (req, res) => {
+    res.render('users/special', {nabarBool : true, footerBoll : true})
+})
 
 
 

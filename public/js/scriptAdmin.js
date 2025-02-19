@@ -17,72 +17,181 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  // function renderUsers(users) {
+  //   // Vider les anciennes données
+  //   userTableBody.innerHTML = '';
+  //   userCardsContainer.innerHTML = '';
+
+  //   users.forEach(user => {
+  //     // Affichage en tableau
+  //     const tableRow = document.createElement('tr');
+  //     tableRow.innerHTML = `
+  //       <td>${user._id}</td>
+  //       <td>${user.nom}</td>
+  //       <td>${user.prenom}</td>
+  //       <td>${user.email}</td>
+  //       <td>${user.telephone}</td>
+  //       <td>${user.formation}</td>
+  //       <td>${user.niveau}</td>
+  //       <td class="table-actions">
+  //         <button class="action-btn view-btn" data-id="${user._id}">
+  //           <i class="fas fa-eye"></i>
+  //         </button>
+  //         <button class="action-btn delete-btn" data-id="${user._id}">
+  //           <i class="fas fa-trash"></i>
+  //         </button>
+  //       </td>
+  //     `;
+
+  //     // Affichage en cartes
+  //     const userCard = document.createElement('div');
+  //     userCard.classList.add('user-card');
+  //     userCard.innerHTML = `
+  //       <div class="user-card-row">
+  //         <span class="user-card-label">Nom:</span>
+  //         <span>${user.nom} ${user.prenom}</span>
+  //       </div>
+  //       <div class="user-card-row">
+  //         <span class="user-card-label">Email:</span>
+  //         <span>${user.email}</span>
+  //       </div>
+  //       <div class="user-card-row">
+  //         <span class="user-card-label">Téléphone:</span>
+  //         <span>${user.telephone}</span>
+  //       </div>
+  //       <div class="user-card-row">
+  //         <span class="user-card-label">Formation:</span>
+  //         <span>${user.formation} (${user.niveau})</span>
+  //       </div>
+  //       <div class="user-card-actions">
+  //         <button class="action-btn view-btn" data-id="${user._id}">
+  //           <i class="fas fa-eye"></i> Voir
+  //         </button>
+  //         <button class="action-btn delete-btn" data-id="${user._id}">
+  //           <i class="fas fa-trash"></i> Supprimer
+  //         </button>
+  //       </div>
+  //     `;
+
+  //     // Ajout des événements
+  //     tableRow.querySelector('.view-btn').addEventListener('click', () => showUserDetails(user));
+  //     tableRow.querySelector('.delete-btn').addEventListener('click', () => deleteUser(user._id));
+  //     userCard.querySelector('.view-btn').addEventListener('click', () => showUserDetails(user));
+  //     userCard.querySelector('.delete-btn').addEventListener('click', () => deleteUser(user._id));
+
+  //     userTableBody.appendChild(tableRow);
+  //     userCardsContainer.appendChild(userCard);
+  //   });
+  // }
+
   function renderUsers(users) {
     // Vider les anciennes données
     userTableBody.innerHTML = '';
     userCardsContainer.innerHTML = '';
 
     users.forEach(user => {
-      // Affichage en tableau
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `
-        <td>${user._id}</td>
-        <td>${user.nom}</td>
-        <td>${user.prenom}</td>
-        <td>${user.email}</td>
-        <td>${user.telephone}</td>
-        <td>${user.formation}</td>
-        <td>${user.niveau}</td>
-        <td class="table-actions">
-          <button class="action-btn view-btn" data-id="${user._id}">
-            <i class="fas fa-eye"></i>
-          </button>
-          <button class="action-btn delete-btn" data-id="${user._id}">
-            <i class="fas fa-trash"></i>
-          </button>
-        </td>
-      `;
+        const isSpecialSession = !user.nom; // Vérifie si c'est un utilisateur de la session spéciale
 
-      // Affichage en cartes
-      const userCard = document.createElement('div');
-      userCard.classList.add('user-card');
-      userCard.innerHTML = `
-        <div class="user-card-row">
-          <span class="user-card-label">Nom:</span>
-          <span>${user.nom} ${user.prenom}</span>
-        </div>
-        <div class="user-card-row">
-          <span class="user-card-label">Email:</span>
-          <span>${user.email}</span>
-        </div>
-        <div class="user-card-row">
-          <span class="user-card-label">Téléphone:</span>
-          <span>${user.telephone}</span>
-        </div>
-        <div class="user-card-row">
-          <span class="user-card-label">Formation:</span>
-          <span>${user.formation} (${user.niveau})</span>
-        </div>
-        <div class="user-card-actions">
-          <button class="action-btn view-btn" data-id="${user._id}">
-            <i class="fas fa-eye"></i> Voir
-          </button>
-          <button class="action-btn delete-btn" data-id="${user._id}">
-            <i class="fas fa-trash"></i> Supprimer
-          </button>
-        </div>
-      `;
+        // Affichage en tableau
+        const tableRow = document.createElement('tr');
+        tableRow.innerHTML = isSpecialSession ? `
+            <td>${user._id}</td>
+            <td colspan="2">${user.firstName} ${user.lastName} (Session Spéciale)</td>
+            <td>${user.email || 'N/A'}</td>
+            <td>${user.phone}</td>
+            <td colspan="2">Heure: ${user.timeSlot}</td>
+            <td class="table-actions">
+              <button class="action-btn view-btn" data-id="${user._id}">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="action-btn delete-btn" data-id="${user._id}">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+        ` : `
+            <td>${user._id}</td>
+            <td>${user.nom}</td>
+            <td>${user.prenom}</td>
+            <td>${user.email}</td>
+            <td>${user.telephone}</td>
+            <td>${user.formation}</td>
+            <td>${user.niveau}</td>
+            <td class="table-actions">
+              <button class="action-btn view-btn" data-id="${user._id}">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="action-btn delete-btn" data-id="${user._id}">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+        `;
 
-      // Ajout des événements
-      tableRow.querySelector('.view-btn').addEventListener('click', () => showUserDetails(user));
-      tableRow.querySelector('.delete-btn').addEventListener('click', () => deleteUser(user._id));
-      userCard.querySelector('.view-btn').addEventListener('click', () => showUserDetails(user));
-      userCard.querySelector('.delete-btn').addEventListener('click', () => deleteUser(user._id));
+        // Affichage en cartes
+        const userCard = document.createElement('div');
+        userCard.classList.add('user-card');
+        userCard.innerHTML = isSpecialSession ? `
+            <div  class="user-card-row">
+              <span class="user-card-label">Nom:</span>
+              <span>${user.firstName} ${user.lastName} (Session Spéciale)</span>
+            </div>
+            <div class="user-card-row">
+              <span class="user-card-label">Email:</span>
+              <span>${user.email || 'N/A'}</span>
+            </div>
+            <div class="user-card-row">
+              <span class="user-card-label">Téléphone:</span>
+              <span>${user.phone}</span>
+            </div>
+            <div class="user-card-row">
+              <span class="user-card-label">Heure de formation:</span>
+              <span>${user.timeSlot}</span>
+            </div>
+            <div class="user-card-actions">
+              <button class="action-btn view-btn" data-id="${user._id}">
+                <i class="fas fa-eye"></i> Voir
+              </button>
+              <button class="action-btn delete-btn" data-id="${user._id}">
+                <i class="fas fa-trash"></i> Supprimer
+              </button>
+            </div>
+        ` : `
+            <div class="user-card-row">
+              <span class="user-card-label">Nom:</span>
+              <span>${user.nom} ${user.prenom}</span>
+            </div>
+            <div class="user-card-row">
+              <span class="user-card-label">Email:</span>
+              <span>${user.email}</span>
+            </div>
+            <div class="user-card-row">
+              <span class="user-card-label">Téléphone:</span>
+              <span>${user.telephone}</span>
+            </div>
+            <div class="user-card-row">
+              <span class="user-card-label">Formation:</span>
+              <span>${user.formation} (${user.niveau})</span>
+            </div>
+            <div class="user-card-actions">
+              <button class="action-btn view-btn" data-id="${user._id}">
+                <i class="fas fa-eye"></i> Voir
+              </button>
+              <button class="action-btn delete-btn" data-id="${user._id}">
+                <i class="fas fa-trash"></i> Supprimer
+              </button>
+            </div>
+        `;
 
-      userTableBody.appendChild(tableRow);
-      userCardsContainer.appendChild(userCard);
+        // Ajout des événements
+        tableRow.querySelector('.view-btn').addEventListener('click', () => showUserDetails(user));
+        tableRow.querySelector('.delete-btn').addEventListener('click', () => deleteUser(user._id));
+        userCard.querySelector('.view-btn').addEventListener('click', () => showUserDetails(user));
+        userCard.querySelector('.delete-btn').addEventListener('click', () => deleteUser(user._id));
+
+        userTableBody.appendChild(tableRow);
+        userCardsContainer.appendChild(userCard);
     });
-  }
+}
+
 
   function showUserDetails(user) {
     const detailsContent = document.getElementById('userDetailsContent');

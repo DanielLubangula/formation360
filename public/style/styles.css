@@ -6,6 +6,38 @@
     --white: #fff;
 }
 
+.special-user {
+    background-color: #FF8C00; /* Orange safran */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.special-session-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.special-session-link a {
+    display: inline-block;
+    background-color: #ff7f50; /* Orange Corail */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.special-session-link a:hover {
+    background-color: #ff6347; /* Rouge Tomate */
+    transform: scale(1.05);
+}
+
+
 * {
     margin: 0;
     padding: 0;

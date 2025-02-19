@@ -1,3 +1,4 @@
+const Registration = require('../models/Special');
 const axios = require('axios'); // Importation du module Axios
 const Inscription = require('../models/Inscription');
 
@@ -80,7 +81,14 @@ exports.Inscription = async (req, res) => {
 exports.getAllUsers = async (req, res) => {
     try {
         const users = await Inscription.find();
-        res.json(users);
+
+        const spe = await Registration.find()
+
+        const allUsers = [...users, ...spe];
+
+
+
+        res.json(allUsers);
     } catch (error) {
         res.status(500).json({ message: "Erreur lors de la récupération des utilisateurs", error });
     }
@@ -101,4 +109,48 @@ exports.processConnexion = async (req, res) => {
     } else {
         return res.json({ success: false, message: "Email ou mot de passe incorrect." });
     }
+};
+
+
+exports.registerUser = async (req, res) => {
+  try {
+    const { firstName, lastName, email, phone, timeSlot } = req.body;
+
+    const newRegistration = new Registration({
+      firstName,
+      lastName,
+      email,
+      phone,
+      timeSlot
+    });
+
+    await newRegistration.save();
+
+     // Envoyer un email via Formspree
+     const formspreeEndpoint = 'https://formspree.io/f/mbldqkyz'; // Remplace par ton URL Formspree
+
+     const emailBody = {
+        firstName,
+        lastName,
+         email,
+         phone,
+        
+         message: `Une nouvelle inscription a été effectuée par ${firstName} ${lastName}. Voici les détails :
+         - Nom : ${firstName}
+         - Prénom : ${lastName}
+         - Email : ${email}
+         - Téléphone : ${phone}
+         `
+     };
+
+     await axios.post(formspreeEndpoint, emailBody, {
+         headers: {
+             'Content-Type': 'application/json'
+         }
+     });
+
+    res.status(201).json({ message: 'Inscription réussie !' });
+  } catch (error) {
+    res.status(500).json({ error: 'Erreur lors de l\'inscription' });
+  }
 };
