@@ -1,273 +1,390 @@
-    <link rel="stylesheet" href="/style/stylesAllCourseProgram.css">
-    <main class="container">
-        <section id="accueil" class="about">
-            <div class="about-content">
-                <h1 class="rotating-text">
-                    <span class="text-layer">Formation360</span>
-                    <span class="text-layer">Votre Partenaire</span>
-                    <span class="text-layer">De Développement</span>
-                    <span class="text-layer">Professionnel</span>
-                </h1>
-                <p class="rotating-subtitle">Votre partenaire pour l'excellence professionnelle et le développement des compétences</p>
-                <div class="rotating-circle">
-                    <div class="circle-container">
-                        <div class="main-circle">
-                            <div class="circle-text">360</div>
-                        </div>
-                        <div class="orbit-ring"></div>
-                        <div class="orbit-ring"></div>
-                        <div class="orbit-ring"></div>
+<link rel="stylesheet" href="/style/stylesAllCourseProgram.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<main class="container">
+    <section id="accueil" class="about">
+        <div class="about-content">
+            <h1 class="rotating-text">
+                <span class="text-layer">Formation360</span>
+                <span class="text-layer">Votre Partenaire</span>
+                <span class="text-layer">De Développement</span>
+                <span class="text-layer">Professionnel</span>
+            </h1>
+            <p class="rotating-subtitle">Votre partenaire pour l'excellence professionnelle et le développement des compétences</p>
+            <div class="rotating-circle">
+                <div class="circle-container">
+                    <div class="main-circle">
+                        <div class="circle-text">360</div>
                     </div>
+                    <div class="orbit-ring"></div>
+                    <div class="orbit-ring"></div>
+                    <div class="orbit-ring"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="formations" class="formations">
-            <h2>Nos Formations</h2>
-            <div class="formation-grid">
-                <div class="formation-card">
-                    <a href="./programmationWeb" class="formation-card-link">
-                        <i class="fas fa-code"></i>
-                        <h3>Programmation Web</h3>
-                        <p>Maîtrisez le développement web moderne avec HTML, CSS.</p>
-                    </a>
-                </div>
-                <div class="formation-card">
-                    <a href="./javascript" class="formation-card-link">
-                        <i class="fab fa-js"></i>
-                        <h3>JavaScript</h3>
-                        <p>Apprenez à créer des applications web dynamiques et interactives avec JavaScript.</p>
-                    </a>
-                </div>
-                <div class="formation-card">
-                    <a href="./photoshop" class="formation-card-link">
-                        <i class="fas fa-image"></i>
-                        <h3>Adobe Photoshop</h3>
-                        <p>Apprenez à éditer et retoucher des images professionnellement.</p>
-                    </a>
-                </div>
-                <div class="formation-card">
-                    <a href="./word" class="formation-card-link">
-                        <i class="fas fa-file-word"></i>
-                        <h3>Microsoft Word</h3>
-                        <p>Apprenez la rédaction et la mise en page de documents !</p>
-                    </a>
-                </div>
-                <div class="formation-card">
-                    <a href="./word" class="formation-card-link">
-                        <i class="fas fa-table"></i>
-                        <h3>Microsoft Excel</h3>
-                        <p>Maîtrisez l'analyse de données et les tableaux complexes.</p>
-                    </a>
-                </div>
-                <div class="formation-card">
-                    <a href="maintenace" class="formation-card-link">
-                        <i class="fas fa-laptop"></i>
-                        <h3>Maintenance des ordinateurs</h3>
-                        <p>Apprenez à diagnostiquer et réparer les ordinateurs fixes et portables.</p>
-                    </a>
-                </div>
+    <!-- Bannière spéciale vacances améliorée -->
+    <section class="vacation-banner">
+        <div class="vacation-content">
+            <h2><i class="bi bi-sun-fill"></i> FORMATIONS SPÉCIALES VACANCES <i class="bi bi-emoji-smile"></i></h2>
+            <p class="lead">Profitez de vos vacances pour booster vos compétences avec nos formations intensives !</p>
+            <div class="highlight-box">
+                <p><i class="bi bi-stars"></i> <strong>INSCRIPTION GRATUITE</strong> + <strong>SUPPORT PERSONNALISÉ</strong> <i class="bi bi-stars"></i></p>
             </div>
-        </section>
+            <div class="benefits">
+                <p><i class="bi bi-check-circle-fill"></i> Horaires adaptés aux vacanciers</p>
+                <p><i class="bi bi-check-circle-fill"></i> Formations accélérées et efficaces</p>
+                <p><i class="bi bi-check-circle-fill"></i> Certificat de participation offert</p>
+            </div>
+            <a href="#vacation-schedule" class="vacation-btn">
+                <i class="bi bi-calendar-week"></i> Découvrez notre programme spécial
+            </a>
+        </div>
+    </section>
 
-        <section id="inscription" class="inscription">
-            <h2>Formulaire d'Inscription</h2>
-            <form id="inscriptionForm">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="nom">Nom *</label>
-                        <input type="text" id="nom" name="nom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="prenom">Prénom *</label>
-                        <input type="text" id="prenom" name="prenom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="telephone">Téléphone *</label>
-                        <input type="tel" id="telephone" name="telephone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="dateNaissance">Date de Naissance</label>
-                        <input type="date" id="dateNaissance" name="dateNaissance">
-                    </div>
-                    <div class="form-group">
-                        <label for="formation">Formation souhaitée *</label>
-                        <select id="formation" name="formation" required>
-                            <option value="">Sélectionnez une formation</option>
-                            <option value="programmation-web">Programmation Web</option>
-                            <option value="javascript">JavaScript</option>
-                            <option value="photoshop">Adobe Photoshop</option>
-                            <option value="word">Microsoft Word</option>
-                            <option value="excel">Microsoft Excel</option>
-                            <option value="maintenance-informatique">Maintenance des ordinateurs</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="niveau">Niveau *</label>
-                        <select id="niveau" name="niveau" required>
-                            <option value="">Sélectionnez votre niveau</option>
-                            <option value="debutant">Débutant</option>
-                            <option value="intermediaire">Intermédiaire</option>
-                            <option value="avance">Avancé</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="motivation">Motivations</label>
-                        <textarea id="motivation" name="motivation" rows="4"></textarea>
-                    </div>
+    <section id="formations" class="formations">
+        <h2>Nos Formations</h2>
+        <div class="formation-grid">
+            <div class="formation-card">
+            <a href="./programmationWeb" class="formation-card-link">
+                <i class="fas fa-code"></i>
+                <h3>Programmation Web</h3>
+                <p>Maîtrisez le développement web moderne avec HTML, CSS.</p>
+            </a>
+            </div>
+            <div class="formation-card">
+            <a href="./javascript" class="formation-card-link">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Apprenez à créer des applications web dynamiques et interactives avec JavaScript.</p>
+            </a>
+            </div>
+            <div class="formation-card">
+            <a href="./photoshop" class="formation-card-link">
+                <i class="fas fa-image"></i>
+                <h3>Adobe Photoshop</h3>
+                <p>Apprenez à éditer et retoucher des images professionnellement.</p>
+            </a>
+            </div>
+            <div class="formation-card">
+            <a href="./word" class="formation-card-link">
+                <i class="fas fa-file-word"></i>
+                <h3>Microsoft Word</h3>
+                <p>Apprenez la rédaction et la mise en page de documents !</p>
+            </a>
+            </div>
+            <div class="formation-card">
+            <a href="./excel" class="formation-card-link">
+                <i class="fas fa-table"></i>
+                <h3>Microsoft Excel</h3>
+                <p>Maîtrisez l'analyse de données et les tableaux complexes.</p>
+            </a>
+            </div>
+            <div class="formation-card">
+            <a href="./maintenance" class="formation-card-link">
+                <i class="fas fa-laptop"></i>
+                <h3>Maintenance des ordinateurs</h3>
+                <p>Apprenez à diagnostiquer et réparer les ordinateurs fixes et portables.</p>
+            </a>
+            </div>
+            <div class="formation-card">
+            <a href="./makeup" class="formation-card-link">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Makeup</h3>
+                <p>Apprenez les techniques de maquillage professionnel.</p>
+            </a>
+            </div>
+            <div class="formation-card">
+            <a href="./powerpoint" class="formation-card-link">
+                <i class="fas fa-chalkboard"></i>
+                <h3>Microsoft PowerPoint</h3>
+                <p>Créez des présentations captivantes et professionnelles.</p>
+            </a>
+            </div>
+            <div class="formation-card">
+            <a href="./access" class="formation-card-link">
+                <i class="fas fa-database"></i>
+                <h3>Microsoft Access</h3>
+                <p>Apprenez à gérer des bases de données efficacement.</p>
+            </a>
+            </div>
+            <div class="formation-card special-card">
+            <a href="#vacation-schedule" class="formation-card-link">
+                <i class="bi bi-umbrella-fill"></i>
+                <h3>Session Spéciale Vacances</h3>
+                <p>Formations intensives pour profiter au maximum de votre temps libre !</p>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="inscription" class="inscription">
+        <h2>Formulaire d'Inscription</h2>
+        <form id="inscriptionForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
                 </div>
                 <div class="form-group">
-                    <button id="submitButton" type="submit">S'inscrire</button>
-
-                    <div id="spinner" style="display: none; text-align : center">
-                        <img src="/images/spinner.gif" alt="Chargement..." style="width: 100px; height: 100px;">
-                    </div>
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" required>
                 </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="dateNaissance">Date de Naissance</label>
+                    <input type="date" id="dateNaissance" name="dateNaissance">
+                </div>
+                <div class="form-group">
+                    <label for="formation">Formation souhaitée *</label>
+                    <select id="formation" name="formation" required>
+                        <option value="">Sélectionnez une formation</option>
+                        <option value="programmation-web">Programmation Web</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="photoshop">Adobe Photoshop</option>
+                        <option value="word">Microsoft Word</option>
+                        <option value="excel">Microsoft Excel</option>
+                        <option value="maintenance-informatique">Maintenance des ordinateurs</option>
+                        <option value="access">Microsoft Access</option>
+                        <option value="powerpoint">Microsoft PowerPoint</option>
+                        <option value="makeup">Makeup</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="niveau">Niveau *</label>
+                    <select id="niveau" name="niveau" required>
+                        <option value="">Sélectionnez votre niveau</option>
+                        <option value="debutant">Débutant</option>
+                        <option value="intermediaire">Intermédiaire</option>
+                        <option value="avance">Avancé</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="motivation">Motivations</label>
+                    <textarea id="motivation" name="motivation" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <button id="submitButton" type="submit" class="btn-enroll">
+                    <i class="bi bi-pencil-square"></i> S'inscrire maintenant
+                </button>
 
-                 <!-- Lien bien visible pour la session spéciale -->
-        <div class="special-session-link">
-            <a href="/specialsession">🔹 Accéder à la Session Spéciale 🔹</a>
+                <div id="spinner" style="display: none; text-align : center">
+                    <img src="/images/spinner.gif" alt="Chargement..." style="width: 100px; height: 100px;">
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Horaire Spécial Vacances sous forme de cartes organisées -->
+    <section id="vacation-schedule" class="vacation-schedule">
+        <div class="section-header">
+            <h2><i class="bi bi-calendar-heart"></i> Programme Spécial Vacances</h2>
+            <p class="subtitle">Des formations intensives du lundi au vendredi pour maximiser votre apprentissage</p>
         </div>
-            </form>
-        </section>
-
-        <div class="course-schedule">
-        <h1>Nos Programmes de Formation</h1>
-        <div class="courses-grid">
-            <div class="course-card excel">
-                <h2>Excel</h2>
-                <div class="course-details">
-                    <h3>Lundi et Jeudi</h3>
-                    <div class="modules">
-                        <div class="module">
-                            <span class="module-label">Module 1</span>
-                            <span class="module-time">9h00 - 10h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 2</span>
-                            <span class="module-time">12h00 - 13h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 3</span>
-                            <span class="module-time">14h00 - 15h00</span>
-                        </div>
+        
+        <div class="schedule-cards">
+            <!-- Lundi -->
+            <div class="day-card">
+                <div class="day-header">
+                    <i class="bi bi-calendar-day"></i>
+                    <h3>Lundi</h3>
+                </div>
+                <div class="time-slots">
+                    <div class="time-slot">
+                        <span class="time">8H00 - 9H00</span>
+                        <span class="course"><i class="bi bi-file-earmark-word"></i> Word</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">9H00 - 10H00</span>
+                        <span class="course"><i class="bi bi-file-earmark-spreadsheet"></i> Excel</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">10H00 - 11H00</span>
+                        <span class="course"><i class="bi bi-database"></i> Access</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">11H00 - 12H00</span>
+                        <span class="course"><i class="bi bi-easel"></i> PowerPoint</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">12H00 - 13H00</span>
+                        <span class="course"><i class="bi bi-code-square"></i> Programmation Web</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">13H00 - 14H00</span>
+                        <span class="course"><i class="bi bi-image"></i> Photoshop</span>
+                    </div>
+                    <div class="time-slot highlight">
+                        <span class="time">09H00 - 11H00</span>
+                        <span class="course"><i class="bi bi-brush"></i> Makeup</span>
                     </div>
                 </div>
             </div>
-
-            <div class="course-card web-programming">
-                <h2>Programmation Web</h2>
-                <div class="course-details">
-                    <h3>Lundi et Jeudi</h3>
-                    <div class="modules">
-                        <div class="module">
-                            <span class="module-label">Module 1</span>
-                            <span class="module-time">8h00 - 9h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 2</span>
-                            <span class="module-time">11h00 - 12h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 3</span>
-                            <span class="module-time">13h00 - 14h00</span>
-                        </div>
+            
+            <!-- Mardi -->
+            <div class="day-card">
+                <div class="day-header">
+                    <i class="bi bi-calendar-day"></i>
+                    <h3>Mardi</h3>
+                </div>
+                <div class="time-slots">
+                    <div class="time-slot">
+                        <span class="time">8H00 - 9H00</span>
+                        <span class="course"><i class="bi bi-file-earmark-word"></i> Word</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">9H00 - 10H00</span>
+                        <span class="course"><i class="bi bi-tools"></i> Maintenance</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">10H00 - 11H00</span>
+                        <span class="course"><i class="bi bi-database"></i> Access</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">11H00 - 12H00</span>
+                        <span class="course"><i class="bi bi-easel"></i> PowerPoint</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">12H00 - 13H00</span>
+                        <span class="course"><i class="bi bi-code-square"></i> Programmation Web</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">13H00 - 14H00</span>
+                        <span class="course"><i class="bi bi-image"></i> Photoshop</span>
                     </div>
                 </div>
             </div>
-
-            <div class="course-card word">
-                <h2>Word</h2>
-                <div class="course-details">
-                    <h3>Mardi et Vendredi</h3>
-                    <div class="modules">
-                        <div class="module">
-                            <span class="module-label">Module 1</span>
-                            <span class="module-time">9h00 - 10h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 2</span>
-                            <span class="module-time">12h00 - 13h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 3</span>
-                            <span class="module-time">14h00 - 15h00</span>
-                        </div>
+            
+            <!-- Mercredi -->
+            <div class="day-card">
+                <div class="day-header">
+                    <i class="bi bi-calendar-day"></i>
+                    <h3>Mercredi</h3>
+                </div>
+                <div class="time-slots">
+                    <div class="time-slot">
+                        <span class="time">8H00 - 9H00</span>
+                        <span class="course"><i class="bi bi-file-earmark-word"></i> Word</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">9H00 - 10H00</span>
+                        <span class="course"><i class="bi bi-file-earmark-spreadsheet"></i> Excel</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">10H00 - 11H00</span>
+                        <span class="course"><i class="bi bi-database"></i> Access</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">11H00 - 12H00</span>
+                        <span class="course"><i class="bi bi-easel"></i> PowerPoint</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">12H00 - 13H00</span>
+                        <span class="course"><i class="bi bi-code-square"></i> Programmation Web</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">13H00 - 14H00</span>
+                        <span class="course"><i class="bi bi-image"></i> Photoshop</span>
                     </div>
                 </div>
             </div>
-
-            <div class="course-card javascript">
-                <h2>JavaScript</h2>
-                <div class="course-details">
-                    <h3>Mardi et Vendredi</h3>
-                    <div class="modules">
-                        <div class="module">
-                            <span class="module-label">Module 1</span>
-                            <span class="module-time">8h00 - 9h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 2</span>
-                            <span class="module-time">11h00 - 12h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 3</span>
-                            <span class="module-time">13h00 - 14h00</span>
-                        </div>
+            
+            <!-- Jeudi -->
+            <div class="day-card">
+                <div class="day-header">
+                    <i class="bi bi-calendar-day"></i>
+                    <h3>Jeudi</h3>
+                </div>
+                <div class="time-slots">
+                    <div class="time-slot">
+                        <span class="time">8H00 - 9H00</span>
+                        <span class="course"><i class="bi bi-file-earmark-word"></i> Word</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">9H00 - 10H00</span>
+                        <span class="course"><i class="bi bi-tools"></i> Maintenance</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">10H00 - 11H00</span>
+                        <span class="course"><i class="bi bi-database"></i> Access</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">11H00 - 12H00</span>
+                        <span class="course"><i class="bi bi-easel"></i> PowerPoint</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">12H00 - 13H00</span>
+                        <span class="course"><i class="bi bi-code-square"></i> Programmation Web</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">13H00 - 14H00</span>
+                        <span class="course"><i class="bi bi-image"></i> Photoshop</span>
+                    </div>
+                    <div class="time-slot highlight">
+                        <span class="time">09H00 - 11H00</span>
+                        <span class="course"><i class="bi bi-brush"></i> Makeup</span>
                     </div>
                 </div>
             </div>
-
-            <div class="course-card photoshop">
-                <h2>Adobe Photoshop</h2>
-                <div class="course-details">
-                    <h3>Mercredi et Samedi</h3>
-                    <div class="modules">
-                        <div class="module">
-                            <span class="module-label">Module 1</span>
-                            <span class="module-time">9h00 - 10h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 2</span>
-                            <span class="module-time">12h00 - 13h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 3</span>
-                            <span class="module-time">14h00 - 15h00</span>
-                        </div>
-                    </div>
+            
+            <!-- Vendredi -->
+            <div class="day-card">
+                <div class="day-header">
+                    <i class="bi bi-calendar-day"></i>
+                    <h3>Vendredi</h3>
                 </div>
-            </div>
-
-            <div class="course-card computer-maintenance">
-                <h2>Maintenance des Machines</h2>
-                <div class="course-details">
-                    <h3>Mercredi et Samedi</h3>
-                    <div class="modules">
-                        <div class="module">
-                            <span class="module-label">Module 1</span>
-                            <span class="module-time">8h00 - 9h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 2</span>
-                            <span class="module-time">11h00 - 12h00</span>
-                        </div>
-                        <div class="module">
-                            <span class="module-label">Module 3</span>
-                            <span class="module-time">13h00 - 14h00</span>
-                        </div>
+                <div class="time-slots">
+                    <div class="time-slot">
+                        <span class="time">8H00 - 9H00</span>
+                        <span class="course"><i class="bi bi-file-earmark-word"></i> Word</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">9H00 - 10H00</span>
+                        <span class="course"><i class="bi bi-file-earmark-spreadsheet"></i> Excel</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">10H00 - 11H00</span>
+                        <span class="course"><i class="bi bi-database"></i> Access</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">11H00 - 12H00</span>
+                        <span class="course"><i class="bi bi-easel"></i> PowerPoint</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">12H00 - 13H00</span>
+                        <span class="course"><i class="bi bi-code-square"></i> Programmation Web</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">13H00 - 14H00</span>
+                        <span class="course"><i class="bi bi-image"></i> Photoshop</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </main>
+        
+        <div class="location-info">
+            <div class="location-card">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h3>Lieu de formation</h3>
+                <p>ÉGLISE JÉSUS REVIENT SUR MANGUNGU N•1</p>
+                <p>PLACE DU TRIANGLE, CAMP MUNGANGA LA POLICE, NGALIEMA</p>
+                <a href="#" class="map-link">
+                    <i class="bi bi-map"></i> Voir sur la carte
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <script>
+<script>
 document.getElementById('inscriptionForm').addEventListener('submit', async (event) => {
     event.preventDefault();
      const spinner = document.getElementById('spinner');
@@ -323,7 +440,10 @@ document.getElementById('inscriptionForm').addEventListener('submit', async (eve
             'photoshop': 'Adobe Photoshop',
             'word': 'Microsoft Word',
             'excel': 'Microsoft Excel',
-            'maintenance-informatique': 'Maintenance Informatique'
+            'maintenance-informatique': 'Maintenance des ordinateurs',
+            'access': 'Microsoft Access',
+            'powerpoint': 'Microsoft PowerPoint',
+            'makeup': 'Makeup'
         };
         return formationLabels[formation] || formation;
     }
@@ -338,9 +458,7 @@ document.getElementById('inscriptionForm').addEventListener('submit', async (eve
         return niveauLabels[niveau] || niveau;
     }
 
-
-
-// Function to show confirmation modal
+    // Function to show confirmation modal
     function showConfirmationModal(data) {
         // Create modal overlay
         const modalOverlay = document.createElement('div');
@@ -389,11 +507,8 @@ document.getElementById('inscriptionForm').addEventListener('submit', async (eve
                             <h3>Lieu de Formation</h3>
                             <div class="location-details">
                                 <p>Formation360 - Centre de Formation Professionnelle</p>
-                                <p>123 Rue de la Technologie</p>
-                                <p> Ecole lycée de l'espoir <br /> Avenue Luwawu <br />C/ngaliema <b> Ref </b> arrêt mabaya</p>
-                                {{!-- <a href="https://maps.google.com" target="_blank" class="map-link">
-                                    <i class="fas fa-map-marker-alt"></i> Voir sur Google Maps
-                                </a> --}}
+                                <p>ÉGLISE JÉSUS REVIENT SUR MANGUNGU N•1</p>
+                                <p>PLACE DU TRIANGLE, CAMP MUNGANGA LA POLICE, NGALIEMA</p>
                             </div>
                         </div>
 
@@ -440,6 +555,4 @@ document.getElementById('inscriptionForm').addEventListener('submit', async (eve
             event.stopPropagation();
         });
     }
-
 </script>
-

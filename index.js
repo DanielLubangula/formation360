@@ -12,7 +12,6 @@ const route = require('./routes/userRoutes');
 const db = require("./config/db");
 const app = express();
 
-
 // Configuration de la session pour Express
 const sessionMiddleware = session({
   secret: process.env.SESSION_SECRET, // Récupéré depuis .env
@@ -88,5 +87,5 @@ app.use(cors({
 })); 
 
 // Démarrage du serveur
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3500;
 http.listen(PORT, () => console.log(`Serveur démarré sur le port ${PORT}`));

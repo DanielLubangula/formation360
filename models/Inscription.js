@@ -11,4 +11,4 @@ const InscriptionSchema = new mongoose.Schema({
     motivation: { type: String }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Inscription2', InscriptionSchema);
+module.exports = mongoose.model('Inscription3', InscriptionSchema);
