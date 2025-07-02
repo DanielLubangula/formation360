@@ -70,6 +70,7 @@ app.get("/", (req, res) => {
   res.redirect('/home')
 })
 
+
 // Routes principales
 app.use("/", route); 
 
